@@ -23,7 +23,7 @@ namespace AgroPrimeAPI.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=(local);Database=AgroPrime;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Server=(local);Database=AgroPrimeAPI;Integrated Security=True");
             }
         }
 
@@ -34,7 +34,6 @@ namespace AgroPrimeAPI.Models
             modelBuilder.Entity<Worker>(entity =>
             {
                 entity.ToTable("Worker");
-
                 entity.Property(e => e.NumDocumento)
                     .IsRequired();
                 entity.Property(e => e.PrimerNombre)

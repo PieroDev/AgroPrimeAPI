@@ -51,8 +51,7 @@ namespace AgroPrimeAPI
 
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Holiwi");
-                    //context.Response.Redirect("https://github.com/PieroDev/bsaleTest/wiki");
+                    context.Response.Redirect("/api/workers");
                 });
 
                 endpoints.MapControllers();
@@ -60,9 +59,7 @@ namespace AgroPrimeAPI
                 endpoints.MapControllerRoute(
                         name: "default",
                         pattern: "{controller=Worker}/{action=Index}/{id?}"
-                        
                     );
-               
             });
         }
     }

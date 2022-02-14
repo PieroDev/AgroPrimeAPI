@@ -40,7 +40,7 @@ namespace AgroPrimeAPI.Controllers
             {
                 using (AgroPrimeContext apDb = new AgroPrimeContext())
                 {
-                    List<WorkerDTO> workers = apDb.Workers.Select(worker => new WorkerDTO(worker)).ToList();
+                    List<WorkersDTO> workers = apDb.Workers.Select(worker => new WorkersDTO(worker)).ToList();
                     if (workers.Count > 0)
                     {
                         return Ok(new Response()
@@ -57,7 +57,7 @@ namespace AgroPrimeAPI.Controllers
                         {
                             new Error()
                             {
-                                 Id = 1,
+                                Id = 1,
                                 Status = "Not Found",
                                 Code = 404,
                                 Title = "No Data Found",
@@ -117,7 +117,7 @@ namespace AgroPrimeAPI.Controllers
                                 Status = "Not Found",
                                 Code = 404,
                                 Title = "No Data Found",
-                                Detail = "There is no data on database."
+                                Detail = "Couldn't find the worker"
                             }
                         }
                         });
@@ -141,7 +141,7 @@ namespace AgroPrimeAPI.Controllers
 
         [HttpPost]
         [Route("addworker")]
-        public ActionResult AddCLient([FromBody]Worker newWorker)
+        public ActionResult AddWorker([FromBody]Worker newWorker)
         {
             using (AgroPrimeContext apDb = new AgroPrimeContext())
             {
@@ -236,8 +236,8 @@ namespace AgroPrimeAPI.Controllers
                             }
                             else
                             {
-                                //apDb.Add(newWorker);
-                                //apDb.SaveChanges();
+                                apDb.Add(newWorker);
+                                apDb.SaveChanges();
                                 return Ok(new Response()
                                 {
                                     Data = new WorkerDTO(newWorker)
@@ -253,7 +253,7 @@ namespace AgroPrimeAPI.Controllers
                             Id = 1,
                             Status = "Bad Request",
                             Code = 400,
-                            Title = "The client already exists",
+                            Title = "The worker already exists",
                             Detail = "The NumDocumento that you are trying to add is already on the database."
                         });
                         return BadRequest(response);
@@ -454,7 +454,7 @@ namespace AgroPrimeAPI.Controllers
                         apDb.SaveChanges();
                         return Ok(new Response()
                         {
-                            Data = new { deleteId = numDoc }
+                            Data = new { deletedNumDoc = numDoc }
                         });
                     }
                     else

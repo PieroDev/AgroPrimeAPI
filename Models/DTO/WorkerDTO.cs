@@ -9,8 +9,12 @@ namespace AgroPrimeAPI.Models.DTO
     {
         public int Id { get; set; }
         public string NumDocumento { get; set; }
-        public string FechaNacimiento { get; set; }
-        public string NombreCompleto { get; set; }
+        public string PrimerNombre { get; set; }
+        public string SegundoNombre { get; set; }
+        public string PrimerApellido { get; set; }
+        public string SegundoApellido { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+
 
         public WorkerDTO() 
         { 
@@ -20,10 +24,11 @@ namespace AgroPrimeAPI.Models.DTO
         {
             this.Id = worker.Id;
             this.NumDocumento = worker.NumDocumento;
-            this.FechaNacimiento = worker.FechaNacimiento.ToString("dd-MM-yyyy");
-            this.NombreCompleto = $"{worker.PrimerNombre} {worker.SegundoNombre} {worker.PrimerApellido} {worker.SegundoApellido}";
+            this.PrimerNombre = worker.PrimerNombre;
+            this.SegundoNombre = worker.SegundoNombre;
+            this.PrimerApellido = worker.PrimerApellido;
+            this.SegundoApellido = worker.SegundoApellido;
+            this.FechaNacimiento = worker.FechaNacimiento;
         }
-
-
     }
 }
