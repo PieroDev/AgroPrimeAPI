@@ -24,6 +24,8 @@ namespace AgroPrimeAPI.Migrations
                 {
                     table.PrimaryKey("PK_Worker", x => x.Id);
                 });
+
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
