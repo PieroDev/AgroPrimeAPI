@@ -16,7 +16,7 @@ namespace AgroPrimeAPI.Models.Classes
             Errors = new List<Error>();
             Meta = new
             {
-                copyright = "Copyright 2021 | Piero Zúñiga",
+                copyright = "Copyright 2022 | Piero Zúñiga",
                 author = "Piero Zúñiga"
             };
         }
