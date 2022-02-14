@@ -9,7 +9,7 @@ namespace AgroPrimeAPI.Models
 {
     public partial class AgroPrimeContext : DbContext
     {
-        
+
         public AgroPrimeContext()
         {
         }
@@ -18,20 +18,16 @@ namespace AgroPrimeAPI.Models
             : base(options)
         {
         }
-        public AgroPrimeContext(string connectionString)
-        {
-            this.ConnectionString = connectionString;
-        }
 
         public virtual DbSet<Worker> Workers { get; set; }
-        private string ConnectionString { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer(@"Server=(local);Database=AgroPrimeAPI;Integrated Security=True");
-                optionsBuilder.UseSqlServer(ConnectionString);
+                optionsBuilder.UseSqlServer(@"Server=(local);Database=AgroPrimeAPI;Integrated Security=True");
+                //var connectionString = config.GetConnectionString("AgroPrime");
+                //optionsBuilder.UseSqlServer(connectionString);
             }
         }
 

@@ -38,7 +38,7 @@ namespace AgroPrimeAPI.Controllers
         {
             try
             {
-                using (AgroPrimeContext apDb = new AgroPrimeContext(config.GetConnectionString("AgroPrime")))
+                using (AgroPrimeContext apDb = new AgroPrimeContext())
                 {
                     List<WorkersDTO> workers = apDb.Workers.Select(worker => new WorkersDTO(worker)).ToList();
                     if (workers.Count > 0)
