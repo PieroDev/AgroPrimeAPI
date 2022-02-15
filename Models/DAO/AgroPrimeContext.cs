@@ -26,8 +26,6 @@ namespace AgroPrimeAPI.Models
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(@"Server=(local);Database=AgroPrimeAPI;Integrated Security=True");
-                //var connectionString = config.GetConnectionString("AgroPrime");
-                //optionsBuilder.UseSqlServer(connectionString);
             }
         }
 

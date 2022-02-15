@@ -31,7 +31,7 @@ namespace AgroPrimeAPI.Models
             DateTime today = DateTime.Now;
             double totalDays = (today - birthday).TotalDays;
             double totalYears = totalDays / 365;
-            Debug.WriteLine(totalYears);
+
             if(totalYears > 18)
             {
                 return true;
@@ -42,7 +42,4 @@ namespace AgroPrimeAPI.Models
             }
             
         }
-    }
-
-    
-}
+    }}

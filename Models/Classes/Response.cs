@@ -17,7 +17,8 @@ namespace AgroPrimeAPI.Models.Classes
             Meta = new
             {
                 copyright = "Copyright 2022 | Piero Zúñiga",
-                author = "Piero Zúñiga"
+                author = "Piero Zúñiga",
+                PostMan = "https://documenter.getpostman.com/view/13100703/UVeNo3SY"
             };
         }
     }
