@@ -4,15 +4,16 @@
   <summary>Tabla de contenido</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Acerca del proyecto</a>
+      <a href="#Acerca-del-proyecto">Acerca del proyecto</a>
     </li>
     <li>
-      <a href="#getting-started">Comenzando</a>
+      <a href="#Comenzando">Comenzando</a>
       <ul>
-        <li><a href="#installation">Instalación</a></li>
+        <li><a href="#Instalación">Instalación</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#Contacto">Contacto</a></li>
+    <li><a href="#Documentación">Documentación</a></li>
   </ol>
 </details>
 
@@ -83,7 +84,7 @@ Link proyecto: [https://github.com/PieroDev/AgroPrimeAPI](https://github.com/Pie
 
 Para facilitar el testeo de la API, se ha creado una pequeña documentación en postman junto a distintos casos de uso establecidos.
 
-[Link a Documentación:](https://documenter.getpostman.com/view/13100703/UVeNo3SY)
+Link a Documentación: [https://documenter.getpostman.com/view/13100703/UVeNo3SY](https://documenter.getpostman.com/view/13100703/UVeNo3SY)
 
 
 
