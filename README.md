@@ -50,7 +50,8 @@ Además, se añadio el siguiente requerimiento:
    ```
 
 2. Verificar el string de conexión en AgroPrimeContext.cs y editarla si es necesario para indicar el servidor al cual quieres conectar.
-La string a editar es la siguiente en AgroPrimeContext.cs :
+
+   La string a editar es la siguiente en AgroPrimeContext.cs :
 
    ```sh
    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
