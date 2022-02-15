@@ -65,6 +65,13 @@ Además, se añadio el siguiente requerimiento:
    ```
    Este comando creará la base de datos AgroPrimeAPI y su tabla de trabajador, además de generar el procedimiento de almacenado solicitado en esta misma base.
 
+4. Para iniciar la aplicación ejecutar:
+```sh
+   dotnet run
+   ```
+
+4. Ahora podrás revisar la api desde http://localhost:5001
+
 
 <p align="right">(<a href="#top">Volver al inicio</a>)</p>
 
