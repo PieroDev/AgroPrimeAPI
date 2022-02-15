@@ -17,6 +17,9 @@
   </ol>
 </details>
 
+Para facilitar el testeo de la API, se ha creado una pequeña documentación en postman junto a distintos casos de uso establecidos.
+
+Link a Documentación: [https://documenter.getpostman.com/view/13100703/UVeNo3SY](https://documenter.getpostman.com/view/13100703/UVeNo3SY)
 
 <!-- ABOUT THE PROJECT -->
 ## Acerca del proyecto
