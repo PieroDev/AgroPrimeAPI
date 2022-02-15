@@ -49,8 +49,8 @@ Además, se añadio el siguiente requerimiento:
    git clone https://github.com/PieroDev/AgroPrimeAPI.git
    ```
 
-2. Verificar el string de conexión en AgroPrimeContext.cs y editarla si es necesario para indicar el servidor al cual quieres conectar
-   La string a editar es la siguiente en AgroPrimeContext.cs :
+2. Verificar el string de conexión en AgroPrimeContext.cs y editarla si es necesario para indicar el servidor al cual quieres conectar.
+La string a editar es la siguiente en AgroPrimeContext.cs :
 
    ```sh
    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -73,7 +73,7 @@ Además, se añadio el siguiente requerimiento:
    dotnet run
    ```
 
-4. Ahora podrás revisar la api desde [http://localhost:5001](http://localhost:5000)
+5. Ahora podrás revisar la api desde [http://localhost:5001](http://localhost:5000)
 
 
 <p align="right">(<a href="#top">Volver al inicio</a>)</p>
